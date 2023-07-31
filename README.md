@@ -2,8 +2,8 @@
 ---
 
 ## Navigation
-- pwd
-- ls
+- pwd - _show current directory_
+- ls - _show list of files and folders in the current directory_
 - cd [directory]
 - cd ..
 - cd ~
