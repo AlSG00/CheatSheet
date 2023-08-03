@@ -11,20 +11,20 @@
 ## Working with files and folders
 
 ### Creating
-- **touch** [fileName] - _create file with specified name._
-- **touch** [fileName_1] [fileName_2] ... - _create few files with specified names._
-- **mkdir** [folderName] - _create directory ith specified name._
+- **touch** [filename] - _create file with specified name._
+- **touch** [filename_1] [filename_2] ... - _create few files with specified names._
+- **mkdir** [foldername] - _create directory ith specified name._
 
 ### Copying and moving
-- **cp** [fileName] [directory] - _copy specified file to a specified directory._
-- **mv** [fileName] [directory] - _move specified file to a specified directory._
+- **cp** [filename] [directory] - _copy specified file to a specified directory._
+- **mv** [filename] [directory] - _move specified file to a specified directory._
 
 ### Reading
-- **cat** [fileName] - _read text file content._
+- **cat** [filename] - _read text file content._
 
 ### Removing
-- **rm** [fileName] - _remove specified file._
-- **rmdir** [folderName] - _remove specified directory._
+- **rm** [filename] - _remove specified file._
+- **rmdir** [folder-name] - _remove specified directory._
 - **rm -r** [directory] - _remove specified directory and all nested files and directories._
 
 # Useful Features
@@ -46,7 +46,7 @@
 - **git push** - _upload commits to a remoted repository after it was binded with -u flag._
 
 ## Preparing file for a commit
-- **git add** [fileName]- _prepare specified file for commit._
+- **git add** [filename]- _prepare specified file for commit._
 - **git add --all** - _prepare all the new and modified files for commit._
 - **git add .** - _prepare a current folder and all nested files for commit._
 
@@ -66,8 +66,8 @@
 - **git commit --amend -m** "[message]" - _replace message for a last commit with new [message]._
 
 ## Rollback files and commits
-- **git restore --staged** [fileName]- _change specified file from staged state to untracked or modified state._
-- **git restore** [fileName] - _return file to it's last version that was saved via git commit or git add._
+- **git restore --staged** [filename]- _change specified file from staged state to untracked or modified state._
+- **git restore** [filename] - _return file to it's last version that was saved via git commit or git add._
 - **git reset --hard** [commit-hash]- _remove all the changes from workizone and staging zone and rolback them to specified commit._
 
 ## Checking for changes
@@ -79,10 +79,29 @@
 
 # Git branches
 
-Work in progress...
+## Cloning someone's els repository
+- **git clone** [remote-repo-url] - _clone specified remote repository on local machine._
 
----
+## Branches creating
+- **git branch** [branch-name] - _create a new branch called [branch-name] from the current._
+- **git checkout -b** [branch-name] - _create a new branch called [branch-name] and switch to it._
 
-# Git teamwork
+## Navigating through branches
+- **git branch** - _show available branches in curent repository._
+- **git checkout** [branch-name] - _switch to specified branch._
 
-Work in progress...
+## Branches comparing
+- **git diff main HEAD** - _show the difference between main branch and pointer to HEAD._
+- **git diff HEAD~2 HEAD** - _sow the difference between the commit that was two commits ago and the current one._
+
+## Branches removing
+- **git branch -d** [branch-name] - _remove specified branch but only if it's part of the main branch._
+- **git branch -D** [branch-name] - _remove specified branch even if it's not the part of the main branch._
+
+## Branches merging
+- **git merge** [branch-name] - _merge specified branch with current active branch._
+
+## Working with remote repository
+- **git push -u origin** [branch-name] - _push new branch toa remote repository and bind a local branch with a remote one, so for further commits and puashes you could use the command without -u._
+- **git push** [branch-name] - _push aadditional changes to a specified branch, which is already exists in a remote repository._
+- **git pull** - _download changes for a current branch from a remote repository._
