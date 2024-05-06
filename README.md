@@ -67,11 +67,11 @@
 
 ## Rollback files and commits
 - **git restore --staged** [filename]- _change specified file from staged state to untracked or modified state._
-- **git restore** [filename] - _return file to it's last version that was saved via git commit or git add._
-- **git reset --hard** [commit-hash]- _remove all the changes from workizone and staging zone and rolback them to specified commit._
+- **git restore** [filename] - _return file to its last version that was saved via git commit or git add._
+- **git reset --hard** [commit-hash]- _remove all the changes from workzone and staging zone and rollback them to a specified commit._
 
 ## Checking for changes
-- **git diff** - _show difference between modified files and last saved files._
+- **git diff** - _show the difference between modified files and last saved files._
 - **git diff** [commit-hash-1] [commit-hash-2] - _show the difference between two commits._
 - **git diff --staged** - _show the changes in staged files._
 
@@ -87,8 +87,8 @@
 - **git checkout -b** [branch-name] - _create a new branch called [branch-name] and switch to it._
 
 ## Navigating through branches
-- **git branch** - _show available branches in curent repository._
-- **git checkout** [branch-name] - _switch to specified branch._
+- **git branch** - _show available branches in a current repository._
+- **git checkout** [branch-name] - _switch to a specified branch._
 
 ## Branches comparing
 - **git diff main HEAD** - _show the difference between main branch and pointer to HEAD._
@@ -102,6 +102,6 @@
 - **git merge** [branch-name] - _merge specified branch with current active branch._
 
 ## Working with remote repository
-- **git push -u origin** [branch-name] - _push new branch toa remote repository and bind a local branch with a remote one, so for further commits and puashes you could use the command without -u._
+- **git push -u origin** [branch-name] - _push new branch to a remote repository and bind a local branch with a remote one, so for further commits and puashes you could use the command without -u._
 - **git push** [branch-name] - _push aadditional changes to a specified branch, which is already exists in a remote repository._
 - **git pull** - _download changes for a current branch from a remote repository._
